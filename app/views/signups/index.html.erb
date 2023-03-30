@@ -1,0 +1,12 @@
+<h1>Signups#index</h1>
+<ul>
+  <% @signup.each do |signup| %>
+    <li>
+      <%= signup.email %>
+      <%= signup.password%>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Signup", new_signup_path %>
+<%= link_to "logout", logout_path , data: {turbo_method: :delete , turbo_confirm:"are you sure?"}%>
